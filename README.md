@@ -19,7 +19,10 @@ We peopose multi-task joint strategies of self-supervised representation learnin
 * ClusterPre.txt, PairDistance.txt, EdgeMask.txt, PathClass.txt, SimReg.txt and SimCon.txt: a example dataset for six self-supervised task.
 * SSL_data_description.txt : The detailed description of PairDistance.txt, EdgeMask.txt, PathClass.txt, SimReg.txt and SimCon.txt
 
-## Quick start
+## Single task-driven self-supervised representation learning
+[Graph attention networks (GATs)](https://arxiv.org/abs/1710.10903v3) are used to train the single task-driven self-supervised representation learning. The code of GAT can be downloaded from https://github.com/Diego999/pyGAT.
+
+## Multi-task self-supervised representation learning for drug discovey
 `models/` contains the different implementations of graph attention-based adversarial multi-task learning models for three different training paradigm, including classification task, regression task and similarity constrast task. In MSSL2drug, we develop fifteen combinations of multiple tasks. However, there are same implementations among some multi-task combinations. Therefore, we take PairDistance_EdgeMask_SimCon (PES) as an examples:
 
 ### Warm-start scenarios  
