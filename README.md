@@ -19,8 +19,9 @@ We peopose multi-task joint strategies of self-supervised representation learnin
 * ClusterPre.txt, PairDistance.txt, EdgeMask.txt, PathClass.txt, SimReg.txt and SimCon.txt: a example dataset for six self-supervised task.
 * SSL_data_description.txt : The detailed description of PairDistance.txt, EdgeMask.txt, PathClass.txt, SimReg.txt and SimCon.txt
 
-## Data processing
-Switch to the DataProcessing directory
+## Quick start
+
+Run NeoDTI_cv.py to reproduce the cross validation results of NeoDTI.
 
 * bash generating_SSL.sh: generating the training labels for six SSL pretext tasks.
 * bash split_data.sh: spliting dataset to training and test set for six self-supervised learning.
