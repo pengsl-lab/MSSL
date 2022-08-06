@@ -30,7 +30,6 @@ We peopose multi-task joint strategies of self-supervised representation learnin
 
 2. Cold-start scenarios: 
 `bash PES_cold.sh`
-
 `--offset: downstream network`  
 `--scenario: warm-start or cold-start prediction`  
 `--dataclean: whether to remove the test data from SSL `
