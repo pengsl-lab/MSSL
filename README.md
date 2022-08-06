@@ -20,44 +20,16 @@ We peopose multi-task joint strategies of self-supervised representation learnin
 * SSL_data_description.txt : The detailed description of PairDistance.txt, EdgeMask.txt, PathClass.txt, SimReg.txt and SimCon.txt
 
 ## Quick start
+`models/` contains the different implementations of graph attention-based adversarial multi-task learning models for three different training paradigm, including classification task, regression task and similarity constrast task. In MSSL2drug, we develop fifteen combinations of multiple tasks. However, there are same implementations among some multi-task combinations. Therefore, we take PairDistance_EdgeMask_SimCon (PES) as an examples:
 
-Run NeoDTI_cv.py to reproduce the cross validation results of NeoDTI.
+### DTI predictions in warm-start scenarios  
+* bash PES_cold.sh
+
+### DTI predictions in cold-start scenarios  
+* bash PES_warm.sh
 
 * bash generating_SSL.sh: generating the training labels for six SSL pretext tasks.
 * bash split_data.sh: spliting dataset to training and test set for six self-supervised learning.
-
-## Single task-driven self-supervised representation learning
-[Graph attention networks (GATs)](https://arxiv.org/abs/1710.10903v3) are used to train the single task-driven self-supervised representation learning. The code of GAT can be downloaded from https://github.com/Diego999/pyGAT.
-
-## Multi-task self-supervised representation learning
-Switch to the MSSL directory
-
-`models/` contains the different implementations of graph attention-based adversarial multi-task learning models for three different training paradigm, including classification task, regression task and similarity constrast task. In MSSL2drug, we develop fifteen combinations of multiple tasks. However, there are same implementations among some multi-task combinations. Therefore, we are the following examples:
-
-* bash PairDistance_EdgeMask_SimCon.sh: Get the embedding based on PairDistance-EdgeMask-SimCon:
-
-
-## DDI and DTI predictions
-Switch to the DownStream directory
-### Create downstream dataset
-
---offset 0 is DDI network and 1 is DTI network
-
-`python create_sample.py --input ../data/DownStreamdata/DDInet.txt --offset 0`
-
-`python create_sample.py --input ../data/DownStreamdata/DTInet.txt --offset 1`
-
-### DDI predictions in warm-start scenarios  
-`python warm_start.py --input_file ../data/DownStreamdata/DDInet_sample.txt --feature ../MSSL/feature_PairDistance_EdgeMask_SimCon.pt --lr 0.002 --epochs 30 --save DDInet/PairDistance_EdgeMask_SimCon`
-
-### DTI predictions in warm-start scenarios  
-`python warm_start.py --input_file ../data/DownStreamdata/DTInet_sample.txt --feature ../MSSL/feature_PairDistance_EdgeMask_SimCon.pt --lr 0.002 --epochs 30 --save DTInet/PairDistance_EdgeMask_SimCon`
-
-### DDI predictions in cold-start scenarios  
-`python cold_start.py --input_file ../data/DownStreamdata/DDInet_sample.txt --feature ../MSSL/feature_PairDistance_EdgeMask_SimCon.pt --lr 0.002 --epochs 30 --save cold_DDInet/PairDistance_EdgeMask_SimCon`
-
-### DTI predictions in cold-start scenarios  
-`python cold_start.py --input_file ../data/DownStreamdata/DTInet_sample.txt --feature ../MSSL/feature_PairDistance_EdgeMask_SimCon.pt --lr 0.002 --epochs 30 --save cold_DTInet/PairDistance_EdgeMask_SimCon`
 
 ## Requirements
 MSSL2drug is tested to work under:
