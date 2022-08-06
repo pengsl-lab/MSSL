@@ -25,10 +25,10 @@ We peopose multi-task joint strategies of self-supervised representation learnin
 ## Multi-task self-supervised representation learning for drug discovey
 `models/` contains the different implementations of graph attention-based adversarial multi-task learning models for three different training paradigm, including classification task, regression task and similarity constrast task. In MSSL2drug, we develop fifteen combinations of multiple tasks. However, there are same implementations among some multi-task combinations. Therefore, we take PairDistance_EdgeMask_SimCon (PES) as an examples:
 
-### Warm-start scenarios  
+1. Warm-start scenarios  
 * bash PES_warm.sh
 
-### Cold-start scenarios  
+2. Cold-start scenarios  
 * bash PES_warm.sh
 
 ## Requirements
