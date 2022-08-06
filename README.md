@@ -27,7 +27,7 @@ We peopose multi-task joint strategies of self-supervised representation learnin
 
 1. Warm-start scenarios: bash PES_warm.sh
 
-2. Cold-start scenarios: bash PES_warm.sh
+2. Cold-start scenarios: bash PES_cold.sh
 
 ## Requirements
 MSSL2drug is tested to work under:
