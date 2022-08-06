@@ -29,10 +29,9 @@ We peopose multi-task joint strategies of self-supervised representation learnin
 
 2. Cold-start scenarios: bash PES_cold.sh
 
-* --offset: downstream network
-  --scenario: warm-start or cold-start prediction
-  --dataclean: Whether to remove the test data from SSL 
-  --dataclean: Whether to remove the test data from SSL 
+* --offset: downstream network  \\
+* --scenario: warm-start or cold-start prediction  \\
+* --dataclean: Whether to remove the test data from SSL \\
 
 ## Requirements
 MSSL2drug is tested to work under:
