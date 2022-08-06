@@ -22,14 +22,11 @@ We peopose multi-task joint strategies of self-supervised representation learnin
 ## Quick start
 `models/` contains the different implementations of graph attention-based adversarial multi-task learning models for three different training paradigm, including classification task, regression task and similarity constrast task. In MSSL2drug, we develop fifteen combinations of multiple tasks. However, there are same implementations among some multi-task combinations. Therefore, we take PairDistance_EdgeMask_SimCon (PES) as an examples:
 
-### DTI predictions in warm-start scenarios  
-* bash PES_cold.sh
-
-### DTI predictions in cold-start scenarios  
+### Warm-start scenarios  
 * bash PES_warm.sh
 
-* bash generating_SSL.sh: generating the training labels for six SSL pretext tasks.
-* bash split_data.sh: spliting dataset to training and test set for six self-supervised learning.
+### Cold-start scenarios  
+* bash PES_warm.sh
 
 ## Requirements
 MSSL2drug is tested to work under:
