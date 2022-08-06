@@ -31,7 +31,7 @@ We peopose multi-task joint strategies of self-supervised representation learnin
 
 * --offset: downstream network  
 * --scenario: warm-start or cold-start prediction  
-* --dataclean: Whether to remove the test data from SSL 
+* --dataclean: whether to remove the test data from SSL 
 
 ## Requirements
 MSSL2drug is tested to work under:
