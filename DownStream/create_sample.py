@@ -4,10 +4,10 @@ import numpy as np
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--input', type=str, default='./', help='path of the input dataset.')
-parser.add_argument('--offset', type=int, default=0, help='0 is DDI, 1 is DTI')
+parser.add_argument('--offset', type=int, default=0, help='the choice of downstream tasks. 0 is DDI, 1 is DTI')
 parser.add_argument('--seed', type=int, default=18, help='Random seed.')  
-parser.add_argument('--warm_ratio', type=float, default=0.1, help='the ratio of test dataset')
-parser.add_argument('--cold_ratio', type=float, default=0.05, help='the ratio of test dataset')
+parser.add_argument('--warm_ratio', type=float, default=0.1, help='the ratio of test dataset in warm start prediction')
+parser.add_argument('--cold_ratio', type=float, default=0.05, help='the ratio of test dataset in warm start prediction')
 
 args = parser.parse_args()
 
