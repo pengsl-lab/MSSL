@@ -6,12 +6,8 @@ import math
 
 path = '../data/'
 
-
-
 def Biograph(downstream, scenario, dataclean):
     BioHNs = np.loadtxt(path + "BioHNsdata/BioHNs.txt", dtype=int)
-
-
     G=nx.Graph()
     for i in range(BioHNs.shape[0]):
             for j in range(BioHNs.shape[0]):
