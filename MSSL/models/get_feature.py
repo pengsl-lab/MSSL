@@ -5,6 +5,7 @@ from models_reg import *
 from models_sim import *
 from utils import *
 
+
 parser = argparse.ArgumentParser()
 parser.add_argument('--model', type=str, default='./', help='path of the checkpoint.')
 parser.add_argument('--length', type=int, default=2, help='the number of task.')
