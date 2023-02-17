@@ -11,7 +11,6 @@ parser.add_argument('--cold_ratio', type=float, default=0.05, help='the ratio of
 
 args = parser.parse_args()
 
-
 with open(args.input, 'r') as f:
     lines = f.readlines()
 num_postive, num_negtive = 0, 0
