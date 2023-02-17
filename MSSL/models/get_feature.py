@@ -7,8 +7,8 @@ from utils import *
 
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--model', type=str, default='./', help='path of the checkpoint.')
-parser.add_argument('--length', type=int, default=2, help='the number of task.')
+parser.add_argument('--model', type=str, default='./', help='the path of multi-task SSL model.')
+parser.add_argument('--length', type=int, default=2, help='the number of tasks in the combinations.')
 
 args = parser.parse_args()
 features, adj = load_graph()
