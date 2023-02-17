@@ -31,7 +31,7 @@ parser.add_argument('--alpha', type=float, default=0.2, help='Alpha for the leak
 parser.add_argument('--save', type=str, default='./', help='the path for saving multi-task SSL model.')
 parser.add_argument('--batch_size', type=int, default=32, help='the value of batch size.')
 parser.add_argument('--train_file', type=str, default='./', help='the path of training dataset for SSL.')
-parser.add_argument('--test_file', type=str, default='./', help='the path of testing dataset for SSL.')
+parser.add_argument('--test_file', type=str, default='./', help='the path of test dataset for SSL.')
 parser.add_argument('--mode', type=int, default=0, help='the type of label, 0 is int, 1 is float.')
 parser.add_argument('--nclass', type=int, default=1, help='the number of hidden units in output layer.')
 parser.add_argument('--sub', type=int, default=0, help='Is the value of the label minus 1.')
