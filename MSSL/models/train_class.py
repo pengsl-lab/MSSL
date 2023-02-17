@@ -20,7 +20,6 @@ from models_class import MGTA
 # Training settings
 parser = argparse.ArgumentParser()
 parser.add_argument('--no-cuda', action='store_true', default=False, help='Disables CUDA training.')
-parser.add_argument('--sparse', action='store_true', default=False, help='GAT with sparse version or not.')
 parser.add_argument('--seed', type=int, default=72, help='Random seed.')
 parser.add_argument('--epochs', type=int, default=20, help='Number of epochs to train.')
 parser.add_argument('--lr', type=float, default=0.005, help='Initial learning rate.')
@@ -49,12 +48,6 @@ args.cuda = not args.no_cuda and torch.cuda.is_available()
 
 if not os.path.exists(args.save):
     os.makedirs(args.save)
-    
-random.seed(args.seed)
-np.random.seed(args.seed)
-torch.manual_seed(args.seed)
-if args.cuda:
-    torch.cuda.manual_seed(args.seed)
 
 # Load data
 features, adj = load_graph()
