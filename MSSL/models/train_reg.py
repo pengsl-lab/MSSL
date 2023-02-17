@@ -49,12 +49,6 @@ args.cuda = not args.no_cuda and torch.cuda.is_available()
 
 if not os.path.exists(args.save):
     os.makedirs(args.save)
-    
-random.seed(args.seed)
-np.random.seed(args.seed)
-torch.manual_seed(args.seed)
-if args.cuda:
-    torch.cuda.manual_seed(args.seed)
 
 # Load data
 features, adj = load_graph()
