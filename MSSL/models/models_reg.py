@@ -20,6 +20,7 @@ class MGTA(nn.Module):
         
         self.classifier = nn.Linear(nhid*nheads*length*2, 1)
 
+        
     def forward(self, features, adj, path, task):
         x = F.dropout(features, self.dropout, training=self.training)
         private_x = torch.cat([att(x, adj) for att in self.private], dim=1)
