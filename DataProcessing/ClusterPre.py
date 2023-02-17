@@ -10,7 +10,7 @@ path = '../data/'
 parser = argparse.ArgumentParser()
 parser.add_argument('--downstream', type=str, default='DDI', help='The name of downstream')
 parser.add_argument('--scenario', type=str, default='warm', help='The test scenario of downstream')
-parser.add_argument('--dataclean', type=bool, default=0, help='Whether to remove the test data from SSL dataset.')   #  
+parser.add_argument('--dataclean', type=int, default=0, help='Whether to remove the test data from SSL dataset.')   #  
 
 args = parser.parse_args()
 
