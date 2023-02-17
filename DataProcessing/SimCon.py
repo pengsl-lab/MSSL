@@ -11,7 +11,7 @@ drug_sim = np.loadtxt(path +"BioHNsdata/drug_sim.txt")
 pro_sim = np.loadtxt(path +"BioHNsdata/protein_sim.txt")
 disease_sim = np.loadtxt(path +"BioHNsdata/disease_sim.txt")
 drug_num, pro_num, disease_num = drug_sim.shape[0], pro_sim.shape[0], disease_sim.shape[0]
-total_num = drug_num + pro_num + disease_num
+total_num = drug_num + pro_num + disease_num 
 
 
 def sim_contrast(pairnum):
