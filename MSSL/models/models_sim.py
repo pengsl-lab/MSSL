@@ -28,6 +28,7 @@ class MGTA(nn.Module):
         result = inner_product / product
         return result
 
+    
     def forward(self, features, adj, path, task):
         x = F.dropout(features, self.dropout, training=self.training)
         private_x = torch.cat([att(x, adj) for att in self.private], dim=1)
