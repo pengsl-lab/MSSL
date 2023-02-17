@@ -9,17 +9,16 @@ python degree_code.py --downstream DTI   --scenario warm  --dataclean 1 >logpre
 python PairDistance.py  --downstream DTI   --scenario warm --dataclean 1 >>logpre
 python SimCon.py  --downstream DTI   --scenario warm  --dataclean 1 >>logpre
 python EdgeMask.py  --downstream DTI   --scenario warm --dataclean 1 >>logpre
-python PathClass.py  --downstream DTI   --scenario warm --dataclean 1 >>logpre
-python SimReg.py  --downstream DTI   --scenario warm  --dataclean 1 >>logpre
-python ClusterPre.py   --downstream DTI   --scenario warm --dataclean 1 >>logpre
+# python PathClass.py  --downstream DTI   --scenario warm --dataclean 1 >>logpre
+# python SimReg.py  --downstream DTI   --scenario warm  --dataclean 1 >>logpre
+# python ClusterPre.py   --downstream DTI   --scenario warm --dataclean 1 >>logpre
 
 python create_dataset.py --input_file ../data/SSLdata/PairDistance.txt
 python create_dataset.py --input_file ../data/SSLdata/EdgeMask.txt
 python create_dataset.py --input_file ../data/SSLdata/SimCon.txt
-python create_dataset.py --input_file ../data/SSLdata/ClusterPre.txt
-python create_dataset.py --input_file ../data/SSLdata/SimReg.txt
-python create_dataset.py --input_file ../data/SSLdata/PathClass.txt
-python create_dataset.py --input_file ../data/SSLdata/ClusterPre.txt
+# python create_dataset.py --input_file ../data/SSLdata/SimReg.txt
+# python create_dataset.py --input_file ../data/SSLdata/PathClass.txt
+# python create_dataset.py --input_file ../data/SSLdata/ClusterPre.txt
 
 cd ../MSSL
 
