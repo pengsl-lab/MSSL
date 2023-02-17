@@ -31,16 +31,7 @@ args.cuda = not args.no_cuda and torch.cuda.is_available()
 if not os.path.exists(args.save):
     os.makedirs(args.save)
 
-def Seed(seed):
-    random.seed(seed)
-    np.random.seed(seed)
-    torch.manual_seed(seed)
-    torch.cuda.manual_seed(seed)
-    cudnn.benchmark = False
-    cudnn.deterministic = True
 
-
-# Seed(args.seed)
 with open(args.input_file, "r") as f:
     input_data = f.readlines()
 feature = torch.load(args.feature)
@@ -92,7 +83,7 @@ model.cuda()
 best_auc, best_aupr = 0, 0
 filename = args.save.split('/')
 
-train_iter, test_iter = load_cold_data(input_data, feature, args.batch_size, filename[0])      # The random seed must be equal to seed in cold_strat.py and warm_start.py
+train_iter, test_iter = load_cold_data(input_data, feature, args.batch_size, filename[0])     
 for i in range(args.epochs):
     train()
     auc, aupr = test()
