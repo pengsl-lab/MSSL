@@ -11,7 +11,6 @@ pro_sim = np.loadtxt(path+"BioHNsdata/protein_sim.txt")
 disease_sim = np.loadtxt(path+"BioHNsdata/disease_sim.txt")
 drug_num, pro_num, disease_num = drug_sim.shape[0], pro_sim.shape[0], disease_sim.shape[0]
 
-
 def sim_regression(dgpair=70, propair=180, dispair=40):  # a certain number of node pairs
     simsample=open(path+"SSLdata/SimReg.txt", 'w')
     kdg, kpro, kdis = 0, 0, 0
