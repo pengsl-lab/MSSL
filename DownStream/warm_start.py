@@ -32,16 +32,6 @@ if not os.path.exists(args.save):
     os.makedirs(args.save)
 
 
-def Seed(seed):
-    random.seed(seed)
-    np.random.seed(seed)
-    torch.manual_seed(seed)
-    torch.cuda.manual_seed(seed)
-    cudnn.benchmark = False
-    cudnn.deterministic = True
-
-
-# Seed(args.seed)
 input_feature, samples_X, samples_y = load_dataset(args.input_file, args.feature)
 print("load dataset successfully!")
 
@@ -81,7 +71,7 @@ t_total = time.time()
 filename = args.save.split('/')
 
 best_auc, best_aupr = 0, 0
-train_iter, test_iter = load_rand_iter(samples_X, samples_y, args.batch_size,  filename[0])       # The random seed must be equal to seed in cold_strat.py and warm_start.py
+train_iter, test_iter = load_rand_iter(samples_X, samples_y, args.batch_size,  filename[0])      
 model = nn.Sequential(
     #     nn.Linear(input_feature, 1),
     nn.Linear(input_feature, 64),
