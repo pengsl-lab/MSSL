@@ -9,7 +9,6 @@ with open(args.input_file, 'r') as f:
     lines = f.readlines()
 
 random.shuffle(lines)
-random.seed(1)
 num_sample = len(lines)
 num_test = int(num_sample*0.01)
 test = lines[:num_test]
