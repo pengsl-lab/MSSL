@@ -1,7 +1,7 @@
 import random
 import argparse
 parser = argparse.ArgumentParser()
-parser.add_argument('--input_file', type=str, default=False, help='input file.')
+parser.add_argument('--input_file', type=str, default=False, help='the path of input file.')
 
 args = parser.parse_args()
 
