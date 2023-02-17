@@ -25,23 +25,6 @@ def load_dataset(input_file, feature_file):
     input_feature = samples_X.shape[1]
     return input_feature, samples_X, samples_y
 
-# def load_fold_iter(samples_X, samples_y, k, batch_size):
-#     num_test = int(len(samples_X)*0.1)
-#     if k == 0:
-#         test_X, test_y = samples_X[:num_test], samples_y[:num_test]
-#         train_X, train_y = samples_X[num_test:], samples_y[num_test:]
-#     elif k == 9:
-#         test_X, test_y = samples_X[num_test*k:], samples_y[num_test*k:]
-#         train_X, train_y = samples_X[:num_test*k], samples_y[:num_test*k]
-#     else:
-#         test_X, test_y = samples_X[num_test*k:num_test*(k+1)], samples_y[num_test*k:num_test*(k+1)]
-#         train_X = torch.cat([samples_X[0:num_test*k], samples_X[num_test*(k+1):]], dim=0)
-#         train_y = torch.cat([samples_y[0:num_test*k], samples_y[num_test*(k+1):]], dim=0)
-#     train_dataset = Data.TensorDataset(train_X, train_y)
-#     train_iter = Data.DataLoader(train_dataset, batch_size, shuffle=True)
-#     test_dataset = Data.TensorDataset(test_X, test_y)
-#     test_iter = Data.DataLoader(test_dataset, batch_size, shuffle=False)
-#     return train_iter, test_iter
 
 def load_rand_iter(samples_X, samples_y, batch_size, filename):
     test_sample = np.loadtxt('../data/DownStreamdata/' + filename + '_warm_node.txt', dtype=int)
